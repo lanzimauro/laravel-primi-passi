@@ -1,30 +1,10 @@
-//
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
-header {
-    text-align: center;
-    .main-menu {
-        list-style: none;
-        li {
-            display: inline-block;
-            padding: 20px;
-            background-color: lightblue;
-            a {
-                color: black;
-            }
-        }
-    }
-}
+/*RESET*/
+@import '_reset';
+/*COMMON*/
+@import '_common';
+/*HEADER*/
+@import 'partials/_header';
+/*MAIN*/
+@import 'partials/_main';
+/*FOOTER*/
+@import 'partials/_footer';

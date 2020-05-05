@@ -2,11 +2,10 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>Laravel-primi-passi</title>
     </head>
     <body>
-        <main>
-            <a href="{{route('home')}}">Home</a>
-        </main>
+        @include('partials/header')
     </body>
 </html>

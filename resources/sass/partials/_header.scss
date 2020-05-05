@@ -1,0 +1,30 @@
+header {
+    text-align: center;
+    .hamburger {
+        display: none;
+    }
+    .main-menu {
+        list-style: none;
+        li {
+            display: inline-block;
+            padding: 20px;
+            background-color: lightblue;
+            a {
+                color: black;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .main-menu {
+            display: none;
+        }
+        .hamburger {
+            display: block;
+            i {
+                color: #002d75;
+                font-size: 30px;
+            }
+        }
+    }
+}

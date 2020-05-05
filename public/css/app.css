@@ -1,19 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);* {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);/*RESET*/
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*COMMON*/
+
 body {
   font-family: "Open Sans", sans-serif;
+  color: #001942;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
+
+/*HEADER*/
 
 header {
   text-align: center;
+}
+
+header .hamburger {
+  display: none;
 }
 
 header .main-menu {
@@ -29,4 +41,86 @@ header .main-menu li {
 header .main-menu li a {
   color: black;
 }
+
+@media screen and (max-width: 992px) {
+  header .main-menu {
+    display: none;
+  }
+
+  header .hamburger {
+    display: block;
+  }
+
+  header .hamburger i {
+    color: #002d75;
+    font-size: 30px;
+  }
+}
+
+/*MAIN*/
+
+main {
+  padding: 60px 40px;
+}
+
+main .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .cards .card {
+  flex-basis: calc(100% / 3 - 40px);
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  main .cards .card {
+    flex-basis: calc(100% / 2 - 40px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .cards .card {
+    flex-basis: calc(100% - 40px);
+  }
+}
+
+main .cards .card:hover .card-link {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background-color: rgba(0, 25, 66, 0.5);
+}
+
+main .cards .card:hover img {
+  transform: scale(1.1);
+}
+
+main .cards .card img {
+  display: block;
+  width: 100%;
+  transition-duration: 0.3s;
+}
+
+main .cards .card .card-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+}
+
+main .cards .card .card-link h3 {
+  margin: 40px;
+}
+
+main .cards .card .card-link h3 a {
+  color: #fff;
+}
+
+/*FOOTER*/
 
